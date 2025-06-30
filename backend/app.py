@@ -2,11 +2,13 @@ from flask import Flask, request, jsonify
 import joblib
 import numpy as np
 from flask_cors import CORS
+import os
 
 app = Flask(__name__)
-CORS(app)  # allows cross-origin requests
+CORS(app)
 
-model = joblib.load('spoilage_model.pkl')
+model_path = os.path.join(os.path.dirname(__file__), 'spoilage_model.pkl')
+model = joblib.load(model_path)
 
 @app.route('/predict', methods=['POST'])
 def predict():
