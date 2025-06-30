@@ -7,6 +7,33 @@ Built with **Flask (Python)** backend and a **React + Vite** frontend.
 
 🚧 **Note:** This project is currently a _Work in Progress_. Some features may still be under development.
 
+## 📘 Project Summary
+
+### 🔍 Problem
+
+High wastage in food and medicine occurs due to poor shelf-life management and lack of real-time monitoring.
+
+### 💡 Solution
+
+A smart expiry management dashboard powered by simulated IoT inputs and machine learning to:
+
+- Predict spoilage probability
+- Suggest discounts at the right time
+- Provide combo suggestions for near-expiry goods
+- Detect fridge failures and push those items for quick sell
+- Trigger intra-store movement before expiry
+- Flag stores with consistently high spoilage percentages
+
+### 🧪 Mock Setup
+
+This system uses virtual sensors or Python-based APIs to simulate real-time data, including:
+
+- Temperature
+- Humidity
+- Storage duration
+- Days to expiry
+- Spoilage percentage
+
 ## 🚀 Features
 
 - Simulates IoT sensor data (temperature, humidity, time stored, expiry)
@@ -73,10 +100,31 @@ Built with **Flask (Python)** backend and a **React + Vite** frontend.
 
 ---
 
-## ✨ Author
+## 📘 Project Overview
 
-**Harshit Parpe**  
-💼 [LinkedIn](https://www.linkedin.com/in/harshit-parpe-3b0ab024a/) | 💻 [GitHub](https://github.com/harshitparpe)
+### 🔍 Problem
+
+High wastage in food and medicine occurs due to poor shelf-life management and lack of real-time monitoring.
+
+### 💡 Solution
+
+A smart expiry management dashboard powered by simulated IoT inputs and ML prediction:
+
+- Predict spoilage probability of perishable goods
+- Suggest discounts at optimal times
+- Recommend combo offerings to sell near-expiry stock
+- Detect fridge failure and trigger “Quick Sell”
+- Enable intra-store transfers to avoid spoilage
+- Flag stores with high spoilage percentages
+
+### 🧪 Mock Setup
+
+- Uses virtual sensors or Python-based APIs to simulate inputs like temperature, humidity, hours stored, expiry window, and spoilage labels
+
+## ✨ Contributors
+
+- **Harshit Parpe** — Frontend, full-stack integration, & project setup
+- **Abhinav Dubey** — Backend & Machine Learning
 
 ---
 
