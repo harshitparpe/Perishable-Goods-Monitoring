@@ -29,3 +29,6 @@ def predict():
 
 if __name__ == "__main__":
     app.run(debug=True)
+
+from routes.discount_combo import discount_blueprint
+app.register_blueprint(discount_blueprint)
