@@ -1,0 +1,89 @@
+.bar-chart-card {
+  min-height: 200px;
+}
+
+.chart-legend {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.legend-item {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 12px;
+  color: #64748b;
+}
+
+.legend-color {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+}
+
+.legend-color.blue {
+  background: #6366f1;
+}
+
+.legend-color.orange {
+  background: #f97316;
+}
+
+.legend-color.green {
+  background: #10b981;
+}
+
+.legend-color.purple {
+  background: #8b5cf6;
+}
+
+.bar-chart-container {
+  display: flex;
+  align-items: end;
+  justify-content: space-between;
+  height: 120px;
+  margin-top: 20px;
+  gap: 8px;
+}
+
+.bar-group {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  flex: 1;
+}
+
+.bars {
+  display: flex;
+  align-items: end;
+  justify-content: center;
+  gap: 2px;
+  height: 100px;
+  width: 100%;
+}
+
+.bar {
+  width: 12px;
+  border-radius: 2px 2px 0 0;
+  transition: all 0.3s ease;
+}
+
+.bar:hover {
+  transform: scaleY(1.05);
+}
+
+.bar-blue {
+  background: #6366f1;
+}
+
+.bar-orange {
+  background: #f97316;
+}
+
+.bar-label {
+  font-size: 12px;
+  color: #64748b;
+  margin-top: 8px;
+  font-weight: 500;
+}

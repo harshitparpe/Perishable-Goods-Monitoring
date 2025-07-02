@@ -1,0 +1,56 @@
+.pie-chart-card {
+  min-height: 180px;
+}
+
+.pie-actions {
+  display: flex;
+  gap: 8px;
+}
+
+.pie-chart-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 10px;
+}
+
+.pie-chart {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.pie-slice {
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+.pie-slice:hover {
+  opacity: 0.8;
+  transform: scale(1.02);
+}
+
+.pie-center {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.pie-percentage {
+  font-size: 18px;
+  font-weight: 700;
+  color: #6366f1;
+  line-height: 1;
+}
+
+.pie-total {
+  font-size: 14px;
+  font-weight: 600;
+  color: #f97316;
+  line-height: 1;
+  margin-top: 2px;
+}

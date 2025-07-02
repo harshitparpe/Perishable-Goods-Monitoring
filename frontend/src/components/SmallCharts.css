@@ -1,0 +1,59 @@
+.small-charts-container {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.comments-card {
+  min-height: 120px;
+}
+
+.comments-content {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.comments-text {
+  font-size: 12px;
+  color: #64748b;
+  line-height: 1.4;
+}
+
+.mini-chart {
+  height: 60px;
+}
+
+.small-chart-card {
+  min-height: 80px;
+  padding: 15px;
+}
+
+.progress-bars-card {
+  min-height: 100px;
+}
+
+.progress-bars {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.progress-item {
+  display: flex;
+  align-items: center;
+}
+
+.progress-bar-container {
+  flex: 1;
+  height: 8px;
+  background: #f1f5f9;
+  border-radius: 4px;
+  overflow: hidden;
+}
+
+.progress-bar {
+  height: 100%;
+  border-radius: 4px;
+  transition: width 0.5s ease;
+}

@@ -5,9 +5,9 @@ import StatsCard from "./components/StatsCard";
 import Calendar from "./components/Calendar";
 import ProgressCard from "./components/ProgressCard";
 import LineChart from "./components/LineChart";
-// import BarChart from "./components/BarChart";
-// import SmallCharts from "./components/SmallCharts";
-// import PieChart from "./components/PieChart";
+import BarChart from "./components/BarChart";
+import SmallCharts from "./components/SmallCharts";
+import PieChart from "./components/PieChart";
 import "./App.css";
 
 function App() {
@@ -33,34 +33,42 @@ function App() {
         <Header searchTerm={searchTerm} setSearchTerm={setSearchTerm} />
 
         <div className="dashboard-grid">
-          {/* Top Row - Stats and Calendar */}
+          {/* Stats Cards */}
           <div className="top-row">
-            <div className="stats-section">
-              {statsData.map((stat, index) => (
-                <StatsCard
-                  key={index}
-                  value={stat.value}
-                  label={stat.label}
-                  trend={stat.trend}
-                />
-              ))}
-            </div>
+            {statsData.map((stat, index) => (
+              <StatsCard
+                key={index}
+                value={stat.value}
+                label={stat.label}
+                trend={stat.trend}
+              />
+            ))}
+          </div>
+
+          {/* Calendar */}
+          <div className="calendar-area">
             <Calendar />
           </div>
 
-          {/* Middle Row - Line Chart and Progress */}
-          <div className="middle-row">
+          {/* Line Chart */}
+          <div className="chart-area">
             <LineChart />
+          </div>
+
+          {/* Progress Card */}
+          <div className="progress-area">
             <ProgressCard />
           </div>
 
-          {/* Bottom Row - Bar Chart and Small Charts */}
-          <div className="bottom-row">
-            {/* <BarChart /> */}
-            <div className="right-column">
-              {/* <SmallCharts /> */}
-              {/* <PieChart /> */}
-            </div>
+          {/* Bar Chart */}
+          <div className="bars-area">
+            <BarChart />
+          </div>
+
+          {/* Small Charts */}
+          <div className="small-charts-area">
+            <SmallCharts />
+            <PieChart />
           </div>
         </div>
       </div>
