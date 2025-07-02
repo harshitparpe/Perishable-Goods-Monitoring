@@ -1,0 +1,51 @@
+.line-chart-card {
+  min-height: 180px;
+}
+
+.chart-legend {
+  display: flex;
+  gap: 20px;
+}
+
+.legend-item {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 12px;
+  color: #64748b;
+}
+
+.legend-color {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+}
+
+.legend-color.blue {
+  background: #6366f1;
+}
+
+.legend-color.orange {
+  background: #f97316;
+}
+
+.chart-container {
+  margin-top: 20px;
+  height: 120px;
+}
+
+.chart-line {
+  transition: stroke-width 0.2s ease;
+}
+
+.chart-line:hover {
+  stroke-width: 3;
+}
+
+.data-point {
+  transition: r 0.2s ease;
+}
+
+.data-point:hover {
+  r: 4;
+}

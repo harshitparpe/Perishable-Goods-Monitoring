@@ -1,86 +1,69 @@
-import { useState } from "react";
-import axios from "axios";
+import React, { useState } from "react";
+import Sidebar from "./components/Sidebar";
+import Header from "./components/Header";
+import StatsCard from "./components/StatsCard";
+import Calendar from "./components/Calendar";
+import ProgressCard from "./components/ProgressCard";
+import LineChart from "./components/LineChart";
+// import BarChart from "./components/BarChart";
+// import SmallCharts from "./components/SmallCharts";
+// import PieChart from "./components/PieChart";
+import "./App.css";
 
 function App() {
-  const [formData, setFormData] = useState({
-    temp: "",
-    humidity: "",
-    hours_stored: "",
-    days_to_expiry: "",
-  });
+  const [searchTerm, setSearchTerm] = useState("");
 
-  const [result, setResult] = useState(null);
-
-  const handleChange = (e) => {
-    setFormData({ ...formData, [e.target.name]: e.target.value });
-  };
-
-  const handleSubmit = async (e) => {
-    e.preventDefault();
-    try {
-      const res = await axios.post("http://127.0.0.1:5000/predict", {
-        temp: parseFloat(formData.temp),
-        humidity: parseInt(formData.humidity),
-        hours_stored: parseInt(formData.hours_stored),
-        days_to_expiry: parseInt(formData.days_to_expiry),
-      });
-      setResult(res.data);
-    } catch (err) {
-      console.error(err);
-      alert("Prediction failed. Is Flask server running?");
-    }
-  };
+  const statsData = [
+    {
+      value: "1974",
+      label: "Gross est. annual, consectetur adipiscing elit",
+      trend: "up",
+    },
+    {
+      value: "287",
+      label: "Viverra maecenas accumsan lacus vel facilisis volutpat est",
+      trend: "down",
+    },
+  ];
 
   return (
-    <div className="container">
-      <h1>Perishable Goods Spoilage Predictor</h1>
-      <form onSubmit={handleSubmit}>
-        <input
-          name="temp"
-          type="number"
-          step="0.1"
-          placeholder="Temperature (°C)"
-          value={formData.temp}
-          onChange={handleChange}
-          required
-        />
-        <input
-          name="humidity"
-          type="number"
-          placeholder="Humidity (%)"
-          value={formData.humidity}
-          onChange={handleChange}
-          required
-        />
-        <input
-          name="hours_stored"
-          type="number"
-          placeholder="Hours Stored"
-          value={formData.hours_stored}
-          onChange={handleChange}
-          required
-        />
-        <input
-          name="days_to_expiry"
-          type="number"
-          placeholder="Days to Expiry"
-          value={formData.days_to_expiry}
-          onChange={handleChange}
-          required
-        />
-        <button type="submit">Predict</button>
-      </form>
+    <div className="dashboard">
+      <Sidebar />
+      <div className="main-content">
+        <Header searchTerm={searchTerm} setSearchTerm={setSearchTerm} />
 
-      {result && (
-        <div className="result">
-          <p>
-            <strong>Probability:</strong> {result.spoiled_probability}
-          </p>
-          <p>
-            <strong>Recommendation:</strong> {result.recommendation}
-          </p>
+        <div className="dashboard-grid">
+          {/* Top Row - Stats and Calendar */}
+          <div className="top-row">
+            <div className="stats-section">
+              {statsData.map((stat, index) => (
+                <StatsCard
+                  key={index}
+                  value={stat.value}
+                  label={stat.label}
+                  trend={stat.trend}
+                />
+              ))}
+            </div>
+            <Calendar />
+          </div>
+
+          {/* Middle Row - Line Chart and Progress */}
+          <div className="middle-row">
+            <LineChart />
+            <ProgressCard />
+          </div>
+
+          {/* Bottom Row - Bar Chart and Small Charts */}
+          <div className="bottom-row">
+            {/* <BarChart /> */}
+            <div className="right-column">
+              {/* <SmallCharts /> */}
+              {/* <PieChart /> */}
+            </div>
+          </div>
         </div>
-      )}
+      </div>
     </div>
   );
 }
