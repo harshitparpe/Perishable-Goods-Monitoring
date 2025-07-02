@@ -15,13 +15,15 @@ function App() {
 
   const statsData = [
     {
-      value: "1974",
-      label: "Gross est. annual, consectetur adipiscing elit",
+      value: "20067",
+      label: "Profits",
       trend: "up",
+      picture:
+        "https://www.readyconvenience.com/wp-content/uploads/2018/04/04.04.18-Grow-Your-Profits-Large.jpg",
     },
     {
-      value: "287",
-      label: "Viverra maecenas accumsan lacus vel facilisis volutpat est",
+      value: "1285",
+      label: "Food Wastage",
       trend: "down",
     },
   ];
@@ -68,6 +70,10 @@ function App() {
           {/* Small Charts */}
           <div className="small-charts-area">
             <SmallCharts />
+          </div>
+
+          {/* Pie Chart */}
+          <div className="pie-chart-area">
             <PieChart />
           </div>
         </div>

@@ -17,23 +17,23 @@ const BarChart = () => {
   return (
     <div className="bar-chart-card card">
       <div className="card-header">
-        <h3 className="card-title">Adipiscing</h3>
+        <h3 className="card-title">Weekly Analysis</h3>
         <div className="chart-legend">
           <div className="legend-item">
             <div className="legend-color blue"></div>
-            <span>Lorem</span>
+            <span>Total Items</span>
           </div>
           <div className="legend-item">
             <div className="legend-color orange"></div>
-            <span>Ipsum</span>
+            <span>Perishable Items</span>
           </div>
           <div className="legend-item">
             <div className="legend-color green"></div>
-            <span>Dolor</span>
+            <span>Perishable Items Sold</span>
           </div>
           <div className="legend-item">
             <div className="legend-color purple"></div>
-            <span>Consectetur</span>
+            <span>Perishable Items Wasted</span>
           </div>
         </div>
       </div>

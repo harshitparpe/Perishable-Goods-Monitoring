@@ -39,15 +39,15 @@ const LineChart = () => {
   return (
     <div className="line-chart-card card">
       <div className="card-header">
-        <h3 className="card-title">Dolor sit amet</h3>
+        <h3 className="card-title">Trends</h3>
         <div className="chart-legend">
           <div className="legend-item">
             <div className="legend-color blue"></div>
-            <span>Lorem</span>
+            <span>Blue</span>
           </div>
           <div className="legend-item">
             <div className="legend-color orange"></div>
-            <span>Ipsum</span>
+            <span>Orange</span>
           </div>
         </div>
       </div>

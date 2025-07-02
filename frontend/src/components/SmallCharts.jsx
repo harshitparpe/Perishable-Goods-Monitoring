@@ -3,16 +3,16 @@ import "./SmallCharts.css";
 
 const SmallCharts = () => {
   // Sample data for small charts
-  const chartData1 = [
-    { x: 0, y: 30 },
-    { x: 1, y: 45 },
-    { x: 2, y: 35 },
-    { x: 3, y: 60 },
-    { x: 4, y: 45 },
-    { x: 5, y: 70 },
-    { x: 6, y: 55 },
-    { x: 7, y: 65 },
-  ];
+  // const chartData1 = [
+  //   { x: 0, y: 30 },
+  //   { x: 1, y: 45 },
+  //   { x: 2, y: 35 },
+  //   { x: 3, y: 60 },
+  //   { x: 4, y: 45 },
+  //   { x: 5, y: 70 },
+  //   { x: 6, y: 55 },
+  //   { x: 7, y: 65 },
+  // ];
 
   const chartData2 = [
     { x: 0, y: 40 },
@@ -49,14 +49,13 @@ const SmallCharts = () => {
       {/* Comments Section */}
       <div className="comments-card card">
         <div className="card-header">
-          <h3 className="card-title">Comments</h3>
+          <h3 className="card-title">AI Suggestions</h3>
         </div>
         <div className="comments-content">
           <p className="comments-text">
-            Neque porro quisquam est qui dolorem ipsum quia dolor sit amet,
-            consectetur, adipisci velit...
+            Discounts, Offers and Deals suggested by AI...
           </p>
-          <div className="mini-chart">
+          {/* <div className="mini-chart">
             <svg width="100%" height="60" viewBox="0 0 200 60">
               <defs>
                 <linearGradient
@@ -79,12 +78,13 @@ const SmallCharts = () => {
                 strokeLinecap="round"
               />
             </svg>
-          </div>
+          </div> */}
         </div>
       </div>
 
       {/* Second Chart */}
       <div className="small-chart-card card">
+        <p className="comments-text">Projected Growth</p>
         <div className="mini-chart">
           <svg width="100%" height="60" viewBox="0 0 200 60">
             <defs>
@@ -114,7 +114,7 @@ const SmallCharts = () => {
       {/* Progress Bars */}
       <div className="progress-bars-card card">
         <div className="card-header">
-          <h3 className="card-title">Dolore magna</h3>
+          <h3 className="card-title">AI accuracy</h3>
         </div>
         <div className="progress-bars">
           <div className="progress-item">

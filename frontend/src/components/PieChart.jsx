@@ -45,7 +45,7 @@ const PieChart = () => {
   return (
     <div className="pie-chart-card card">
       <div className="card-header">
-        <h3 className="card-title">Consectetur</h3>
+        <h3 className="card-title">Perished Items</h3>
         <div className="pie-actions">
           <button className="btn btn-secondary">Month</button>
           <button className="btn btn-secondary">Year</button>

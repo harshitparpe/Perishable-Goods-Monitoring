@@ -7,7 +7,7 @@ const ProgressCard = () => {
   return (
     <div className="progress-card card">
       <div className="card-header">
-        <h3 className="card-title">Lorem Ipsum</h3>
+        <h3 className="card-title">Progress</h3>
       </div>
 
       <div className="progress-content">
@@ -44,14 +44,14 @@ const ProgressCard = () => {
 
         <div className="progress-details">
           <div className="detail-item">
-            <div className="detail-label">Lorem Ipsum</div>
+            <div className="detail-label">Product 1</div>
             <div className="detail-bar">
               <div className="detail-progress" style={{ width: "80%" }}></div>
             </div>
           </div>
 
           <div className="detail-item">
-            <div className="detail-label">Dolor sit amet</div>
+            <div className="detail-label">Product 2</div>
             <div className="detail-bar">
               <div
                 className="detail-progress orange"
@@ -61,7 +61,7 @@ const ProgressCard = () => {
           </div>
 
           <div className="detail-item">
-            <div className="detail-label">Consectetur</div>
+            <div className="detail-label">Product 3</div>
             <div className="detail-bar">
               <div
                 className="detail-progress green"
@@ -71,7 +71,7 @@ const ProgressCard = () => {
           </div>
         </div>
 
-        <button className="btn btn-primary full-width">Sendmail</button>
+        <button className="btn btn-primary full-width">More Details</button>
       </div>
     </div>
   );
