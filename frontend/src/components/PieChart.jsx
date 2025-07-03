@@ -1,5 +1,5 @@
 import React from "react";
-import "./PieChart.css";
+import "./style/PieChart.css";
 
 const PieChart = () => {
   const data = [

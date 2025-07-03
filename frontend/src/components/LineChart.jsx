@@ -1,5 +1,5 @@
 import React from "react";
-import "./LineChart.css";
+import "./style/LineChart.css";
 
 const LineChart = () => {
   // Sample data points for the chart

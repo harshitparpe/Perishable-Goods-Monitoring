@@ -1,5 +1,5 @@
 import React from "react";
-import "./ProgressCard.css";
+import "./style/ProgressCard.css";
 
 const ProgressCard = () => {
   const progressValue = 75;

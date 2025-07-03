@@ -1,6 +1,5 @@
 import React from "react";
-import "./StatsCard.css";
-import "./AIsection.css";
+import "./style/StatsCard.css";
 
 // Sample data for small charts
 const chartData1 = [

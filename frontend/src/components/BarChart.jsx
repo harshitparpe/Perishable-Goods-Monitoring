@@ -1,5 +1,5 @@
 import React from "react";
-import "./BarChart.css";
+import "./style/BarChart.css";
 
 const BarChart = () => {
   const data = [
