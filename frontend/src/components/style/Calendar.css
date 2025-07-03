@@ -1,5 +1,6 @@
 .calendar-card {
-  min-height: 280px;
+  min-height: 350px;
+  max-height: 350px;
 }
 
 .calendar-header {
@@ -16,6 +17,7 @@
 }
 
 .nav-btn {
+  width: 15%;
   background: none;
   border: none;
   font-size: 18px;
@@ -85,4 +87,23 @@
 
 .calendar-day.empty {
   pointer-events: none;
+}
+
+.calendar-title {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.calendar-year {
+  font-size: 11px;
+  font-weight: 400;
+  color: #94a3b8;
+  margin-bottom: 2px;
+}
+
+.calendar-month {
+  font-size: 16px;
+  font-weight: 600;
+  color: #1e293b;
 }
