@@ -6,8 +6,8 @@ const ProgressCard = () => {
 
   return (
     <div className="progress-card card">
-      <div className="card-header">
-        <h3 className="card-title">Progress</h3>
+      <div className="header">
+        <h3 className="title">📈 Progress</h3>
       </div>
 
       <div className="progress-content">
