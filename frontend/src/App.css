@@ -6,7 +6,7 @@
 
 body {
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
-  background: #f8f9ff;
+  background-color: #081c15;
   color: #333;
   overflow-x: hidden;
 }
@@ -23,46 +23,57 @@ body {
   max-width: calc(100vw - 60px);
 }
 
-.dashboard-grid {
+/* .dashboard-grid {
   display: grid;
   gap: 20px;
   max-width: 1400px;
   grid-template-areas:
-    "stats stats calendar"
-    "AI progress pie-chart"
-    "bars chart chart";
-  grid-template-columns: 1fr 1fr 300px;
+    "progress progress progress calendar"
+    "stats stats AI AI"
+    "stats stats AI AI";
+  grid-template-columns: 1fr 1fr 1fr 300px;
   grid-template-rows: auto auto auto;
-}
+} */
 
-.top-row {
-  grid-area: stats;
-  display: grid;
-  grid-template-columns: 1fr 1fr;
+.dashboard-grid {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
   gap: 20px;
 }
 
-.calendar-area {
-  grid-area: calendar;
-}
-
-.chart-area {
-  grid-area: chart;
+.row1 {
+  display: flex;
+  flex-direction: row;
+  /* justify-content: space-around; */
+  align-items: center;
+  gap: 20px;
 }
 
 .progress-area {
-  grid-area: progress;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  gap: 20px;
 }
 
-.bars-area {
-  grid-area: bars;
+.row2 {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  gap: 20px;
 }
 
-.small-charts-area {
-  grid-area: small-charts;
+.stats-area {
   display: flex;
   flex-direction: column;
   gap: 20px;
+  width: 50em;
+}
+
+.AI-area {
+  width: 31em;
 }
 
 .card {

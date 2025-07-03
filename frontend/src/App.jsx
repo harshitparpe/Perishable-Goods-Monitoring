@@ -7,7 +7,6 @@ import ProgressCard from "./components/ProgressCard";
 import LineChart from "./components/LineChart";
 import BarChart from "./components/BarChart";
 import AIsection from "./components/AIsection";
-import PieChart from "./components/PieChart";
 import "./App.css";
 
 function App() {
@@ -37,16 +36,29 @@ function App() {
 
   const statsData = [
     {
-      value: "20067",
-      label: "Profits",
-      trend: "up",
+      value: "16°C",
+      label: "Temperature",
       data: chartData1,
     },
     {
-      value: "1285",
-      label: "Food Wastage",
-      trend: "down",
+      value: "60%",
+      label: "Humidity",
       data: chartData2,
+    },
+  ];
+
+  const progressData = [
+    {
+      value: "234",
+      label: "Profits",
+    },
+    {
+      value: "98",
+      label: "Wastage",
+    },
+    {
+      value: "48",
+      label: "Products",
     },
   ];
 
@@ -57,48 +69,53 @@ function App() {
         <Header searchTerm={searchTerm} setSearchTerm={setSearchTerm} />
 
         <div className="dashboard-grid">
-          {/* Stats Cards */}
-          <div className="top-row">
-            {statsData.map((stat, index) => (
-              <StatsCard
-                key={index}
-                value={stat.value}
-                label={stat.label}
-                trend={stat.trend}
-                data={stat.data}
-              />
-            ))}
+          <div className="row1">
+            {" "}
+            {/* Progress Card */}
+            <div className="progress-area">
+              {progressData.map((progress, index) => (
+                <ProgressCard
+                  key={index}
+                  value={progress.value}
+                  label={progress.label}
+                />
+              ))}
+            </div>
+            {/* Calendar */}
+            <div className="calendar-area">
+              <Calendar />
+            </div>
           </div>
 
-          {/* Calendar */}
-          <div className="calendar-area">
-            <Calendar />
+          <div className="row2">
+            {/* Stats Cards */}
+            <div className="stats-area">
+              {statsData.map((stat, index) => (
+                <StatsCard
+                  key={index}
+                  value={stat.value}
+                  label={stat.label}
+                  trend={stat.trend}
+                  data={stat.data}
+                />
+              ))}
+            </div>
+
+            {/* AI Section */}
+            <div className="AI-area">
+              <AIsection />
+            </div>
           </div>
 
-          {/* Line Chart */}
+          {/* Line Chart
           <div className="chart-area">
             <LineChart />
-          </div>
+          </div> */}
 
-          {/* Progress Card */}
-          <div className="progress-area">
-            <ProgressCard />
-          </div>
-
-          {/* Bar Chart */}
+          {/* Bar Chart
           <div className="bars-area">
             <BarChart />
-          </div>
-
-          {/* AI Section */}
-          <div className="AI-area">
-            <AIsection />
-          </div>
-
-          {/* Pie Chart */}
-          <div className="pie-chart-area">
-            <PieChart />
-          </div>
+          </div> */}
         </div>
       </div>
     </div>

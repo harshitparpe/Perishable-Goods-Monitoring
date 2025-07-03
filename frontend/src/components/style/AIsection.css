@@ -1,11 +1,7 @@
 .ai-container {
   display: flex;
   flex-direction: column;
-  gap: 15px;
-}
-
-.card {
-  min-height: 120px;
+  gap: 20px;
 }
 
 .content {

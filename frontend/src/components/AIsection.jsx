@@ -7,7 +7,7 @@ const AIsection = () => {
       {/* Discount/Offer Suggestions */}
       <div className="card">
         <div className="header">
-          <h3 className="title">🧠 AI Suggestions</h3>
+          <h3 className="title">AI Suggestions</h3>
         </div>
         <div className="content">
           <p className="text">Discounts, Offers and Deals suggested by AI...</p>
@@ -17,7 +17,7 @@ const AIsection = () => {
       {/* Warnings Section */}
       <div className="card">
         <div className="header">
-          <h3 className="title">⚠️ Warnings!</h3>
+          <h3 className="title">Warnings!</h3>
         </div>
         <div className="content">
           <p className="text">Everything going good...</p>
