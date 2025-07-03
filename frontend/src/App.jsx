@@ -13,16 +13,40 @@ import "./App.css";
 function App() {
   const [searchTerm, setSearchTerm] = useState("");
 
+  const chartData1 = [
+    { x: 0, y: 30 },
+    { x: 1, y: 45 },
+    { x: 2, y: 35 },
+    { x: 3, y: 60 },
+    { x: 4, y: 45 },
+    { x: 5, y: 70 },
+    { x: 6, y: 55 },
+    { x: 7, y: 65 },
+  ];
+
+  const chartData2 = [
+    { x: 0, y: 80 },
+    { x: 1, y: 70 },
+    { x: 2, y: 76 },
+    { x: 3, y: 60 },
+    { x: 4, y: 55 },
+    { x: 5, y: 57 },
+    { x: 6, y: 63 },
+    { x: 7, y: 35 },
+  ];
+
   const statsData = [
     {
       value: "20067",
       label: "Profits",
       trend: "up",
+      data: chartData1,
     },
     {
       value: "1285",
       label: "Food Wastage",
       trend: "down",
+      data: chartData2,
     },
   ];
 
@@ -41,7 +65,7 @@ function App() {
                 value={stat.value}
                 label={stat.label}
                 trend={stat.trend}
-                // chartData={stat.chartData}
+                data={stat.data}
               />
             ))}
           </div>

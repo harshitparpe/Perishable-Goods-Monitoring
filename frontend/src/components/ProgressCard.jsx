@@ -2,7 +2,7 @@ import React from "react";
 import "./style/ProgressCard.css";
 
 const ProgressCard = () => {
-  const progressValue = 75;
+  // const progressValue = 75;
 
   return (
     <div className="progress-card card">
@@ -11,7 +11,7 @@ const ProgressCard = () => {
       </div>
 
       <div className="progress-content">
-        <div className="circular-progress">
+        {/* <div className="circular-progress">
           <svg width="120" height="120" viewBox="0 0 120 120">
             <circle
               cx="60"
@@ -40,7 +40,7 @@ const ProgressCard = () => {
           <div className="progress-text">
             <div className="progress-value">{progressValue}%</div>
           </div>
-        </div>
+        </div> */}
 
         <div className="progress-details">
           <div className="detail-item">
