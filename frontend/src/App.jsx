@@ -18,8 +18,6 @@ function App() {
       value: "20067",
       label: "Profits",
       trend: "up",
-      picture:
-        "https://www.readyconvenience.com/wp-content/uploads/2018/04/04.04.18-Grow-Your-Profits-Large.jpg",
     },
     {
       value: "1285",
@@ -43,6 +41,7 @@ function App() {
                 value={stat.value}
                 label={stat.label}
                 trend={stat.trend}
+                // chartData={stat.chartData}
               />
             ))}
           </div>
