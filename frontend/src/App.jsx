@@ -6,7 +6,7 @@ import Calendar from "./components/Calendar";
 import ProgressCard from "./components/ProgressCard";
 import LineChart from "./components/LineChart";
 import BarChart from "./components/BarChart";
-import SmallCharts from "./components/SmallCharts";
+import AIsection from "./components/AIsection";
 import PieChart from "./components/PieChart";
 import "./App.css";
 
@@ -66,9 +66,9 @@ function App() {
             <BarChart />
           </div>
 
-          {/* Small Charts */}
-          <div className="small-charts-area">
-            <SmallCharts />
+          {/* AI Section */}
+          <div className="AI-area">
+            <AIsection />
           </div>
 
           {/* Pie Chart */}
