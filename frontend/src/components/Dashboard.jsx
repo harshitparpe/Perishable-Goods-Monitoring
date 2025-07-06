@@ -4,7 +4,7 @@ import SpoilagePredictor from './dashboard/SpoilagePredictor'
 import SensorNetwork from './dashboard/SensorNetwork'
 import SpoilageChart from './dashboard/SpoilageChart'
 import InventoryTable from './dashboard/InventoryTable'
-import './Dashboard.css'
+import './style/Dashboard.css'
 
 const Dashboard = () => {
   return (
