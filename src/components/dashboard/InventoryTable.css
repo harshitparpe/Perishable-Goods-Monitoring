@@ -1,0 +1,249 @@
+/* Inventory Table Container */
+.inventory-table {
+  min-height: 350px;
+}
+
+.view-all-btn {
+  padding: 0.5rem 1rem;
+  background: #f1f5f9;
+  color: #475569;
+  border: 1px solid #e2e8f0;
+  border-radius: 0.375rem;
+  font-size: 0.875rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+}
+
+.view-all-btn:hover {
+  background: #e2e8f0;
+  color: #334155;
+}
+
+/* Table Container */
+.table-container {
+  margin-top: 1.5rem;
+  overflow-x: auto;
+  border-radius: 0.5rem;
+  border: 1px solid #e2e8f0;
+}
+
+.inventory-table-element {
+  width: 100%;
+  border-collapse: collapse;
+  background: white;
+}
+
+/* Table Header */
+.inventory-table-element thead {
+  background: #f8fafc;
+}
+
+.inventory-table-element th {
+  padding: 0.75rem 1rem;
+  text-align: left;
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: #374151;
+  border-bottom: 1px solid #e2e8f0;
+}
+
+/* Table Rows */
+.table-row {
+  transition: background-color 0.2s ease-in-out;
+}
+
+.table-row:hover {
+  background: #f8fafc;
+}
+
+.inventory-table-element td {
+  padding: 1rem;
+  border-bottom: 1px solid #f1f5f9;
+  vertical-align: middle;
+}
+
+.table-row:last-child td {
+  border-bottom: none;
+}
+
+/* Item Cell */
+.item-cell {
+  min-width: 150px;
+}
+
+.item-info {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+
+.item-name {
+  font-weight: 600;
+  color: #1e293b;
+  font-size: 0.875rem;
+}
+
+.item-category {
+  font-size: 0.75rem;
+  color: #64748b;
+}
+
+/* Location Cell */
+.location-cell {
+  min-width: 140px;
+}
+
+.location-info {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.875rem;
+  color: #475569;
+}
+
+.location-icon {
+  color: #64748b;
+}
+
+/* Quantity Cell */
+.quantity-cell {
+  text-align: center;
+  min-width: 80px;
+}
+
+.quantity-value {
+  font-weight: 600;
+  color: #1e293b;
+  font-size: 0.875rem;
+}
+
+/* Expires Cell */
+.expires-cell {
+  min-width: 100px;
+}
+
+.expires-info {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.875rem;
+  color: #475569;
+}
+
+.expires-icon {
+  color: #64748b;
+}
+
+.expires-soon {
+  color: #dc2626 !important;
+  font-weight: 600;
+}
+
+/* Condition Cell */
+.condition-cell {
+  min-width: 140px;
+}
+
+.condition-info {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.condition-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  font-size: 0.75rem;
+  font-weight: 700;
+}
+
+.condition-icon.excellent {
+  background: #dcfce7;
+  color: #166534;
+}
+
+.condition-icon.good {
+  background: #dbeafe;
+  color: #1e40af;
+}
+
+.condition-icon.warning {
+  background: #fef3c7;
+  color: #d97706;
+}
+
+.condition-icon.critical {
+  background: #fee2e2;
+  color: #dc2626;
+}
+
+.condition-text {
+  font-size: 0.875rem;
+  color: #475569;
+  font-weight: 500;
+}
+
+/* Risk Badges */
+.risk-badge {
+  padding: 0.25rem 0.5rem;
+  border-radius: 9999px;
+  font-size: 0.75rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.025em;
+}
+
+.risk-low {
+  background: #dcfce7;
+  color: #166534;
+}
+
+.risk-medium {
+  background: #fef3c7;
+  color: #d97706;
+}
+
+.risk-high {
+  background: #fee2e2;
+  color: #dc2626;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .table-container {
+    font-size: 0.875rem;
+  }
+  
+  .inventory-table-element th,
+  .inventory-table-element td {
+    padding: 0.5rem;
+  }
+  
+  .item-name {
+    font-size: 0.8rem;
+  }
+  
+  .item-category {
+    font-size: 0.7rem;
+  }
+}
+
+@media (max-width: 640px) {
+  .condition-info {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.25rem;
+  }
+  
+  .location-info,
+  .expires-info {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.25rem;
+  }
+}
