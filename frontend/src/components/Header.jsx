@@ -1,15 +1,25 @@
 import React from 'react'
-import { Search, Bell, User } from 'lucide-react'
+import { Search, Bell, Menu, X } from 'lucide-react'
 import './style/Header.css'
 
-const Header = () => {
+const Header = ({ sidebarOpen, setSidebarOpen }) => {
   return (
     <header className="header">
       <div className="header-content">
-        {/* Page Title */}
-        <div className="header-title">
-          <h1>Perishable Goods Monitor</h1>
-          <span className="header-subtitle">v1.0 Beta</span>
+        {/* Mobile Menu Button and Title */}
+        <div className="header-left">
+          <button 
+            className="menu-btn"
+            onClick={() => setSidebarOpen(!sidebarOpen)}
+            aria-label="Toggle menu"
+          >
+            {sidebarOpen ? <X size={20} /> : <Menu size={20} />}
+          </button>
+          
+          <div className="header-title">
+            <h1>Perishable Goods Monitor</h1>
+            <span className="header-subtitle">v1.0 Beta</span>
+          </div>
         </div>
 
         {/* Header Actions */}

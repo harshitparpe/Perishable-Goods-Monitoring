@@ -14,6 +14,8 @@ import './App.css'
 function App() {
   // State to track the active page/component
   const [activePage, setActivePage] = useState('dashboard')
+  // State to control sidebar visibility
+  const [sidebarOpen, setSidebarOpen] = useState(false)
 
   // Function to render the appropriate component based on active page
   const renderContent = () => {
@@ -42,12 +44,20 @@ function App() {
   return (
     <div className="app">
       {/* Sidebar Navigation */}
-      <Sidebar activePage={activePage} setActivePage={setActivePage} />
+      <Sidebar 
+        activePage={activePage} 
+        setActivePage={setActivePage}
+        isOpen={sidebarOpen}
+        setIsOpen={setSidebarOpen}
+      />
+      
+      {/* Overlay for mobile sidebar */}
+      {sidebarOpen && <div className="sidebar-overlay" onClick={() => setSidebarOpen(false)} />}
       
       {/* Main Content Area */}
       <div className="main-content">
         {/* Header with title and user info */}
-        <Header />
+        <Header sidebarOpen={sidebarOpen} setSidebarOpen={setSidebarOpen} />
         
         {/* Dynamic Content based on active page */}
         <main className="content">

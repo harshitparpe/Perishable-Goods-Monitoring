@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect, useRef } from 'react'
 import { 
   Home, 
   Package, 
@@ -11,7 +11,9 @@ import {
 } from 'lucide-react'
 import './style/Sidebar.css'
 
-const Sidebar = ({ activePage, setActivePage }) => {
+const Sidebar = ({ activePage, setActivePage, isOpen, setIsOpen }) => {
+  const sidebarRef = useRef(null)
+
   // Navigation menu items with icons and labels
   const menuItems = [
     { id: 'dashboard', label: 'Dashboard', icon: Home },
@@ -24,8 +26,33 @@ const Sidebar = ({ activePage, setActivePage }) => {
     { id: 'settings', label: 'Settings', icon: Settings },
   ]
 
+  // Handle clicks outside sidebar to close it
+  useEffect(() => {
+    const handleClickOutside = (event) => {
+      if (sidebarRef.current && !sidebarRef.current.contains(event.target) && isOpen) {
+        setIsOpen(false)
+      }
+    }
+
+    document.addEventListener('mousedown', handleClickOutside)
+    return () => {
+      document.removeEventListener('mousedown', handleClickOutside)
+    }
+  }, [isOpen, setIsOpen])
+
+  const handleNavItemClick = (itemId) => {
+    setActivePage(itemId)
+    // Close sidebar on mobile after selection
+    if (window.innerWidth <= 1024) {
+      setIsOpen(false)
+    }
+  }
+
   return (
-    <div className="sidebar">
+    <div 
+      ref={sidebarRef}
+      className={`sidebar ${isOpen ? 'open' : ''}`}
+    >
       {/* Logo and Brand */}
       <div className="sidebar-header">
         <div className="logo">
@@ -48,7 +75,7 @@ const Sidebar = ({ activePage, setActivePage }) => {
               <li key={item.id}>
                 <button
                   className={`nav-item ${activePage === item.id ? 'active' : ''}`}
-                  onClick={() => setActivePage(item.id)}
+                  onClick={() => handleNavItemClick(item.id)}
                 >
                   <IconComponent size={20} className="nav-icon" />
                   <span className="nav-label">{item.label}</span>
