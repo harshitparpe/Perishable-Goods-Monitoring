@@ -1,82 +1,79 @@
-/* Inventory Table Container */
+/* Inventory Table Styles */
 .inventory-table {
-  min-height: 350px;
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+  overflow: hidden;
+}
+
+.table-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.5rem;
+  border-bottom: 1px solid #f3f4f6;
+}
+
+.header-title {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.header-title h3 {
+  font-size: 1.125rem;
+  font-weight: 600;
+  color: #1f2937;
+  margin: 0;
 }
 
 .view-all-btn {
   padding: 0.5rem 1rem;
-  background: rgba(241, 245, 249, 0.8);
-  backdrop-filter: blur(10px);
-  color: #475569;
-  border: 1px solid #e2e8f0;
-  border-radius: 0.375rem;
+  background: #f3f4f6;
+  border: none;
+  border-radius: 6px;
   font-size: 0.875rem;
-  font-weight: 500;
+  color: #374151;
   cursor: pointer;
-  transition: all 0.3s ease-in-out;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+  transition: all 0.2s ease;
 }
 
 .view-all-btn:hover {
-  background: rgba(226, 232, 240, 0.9);
-  color: #334155;
-  transform: translateY(-1px);
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  background: #e5e7eb;
 }
 
-/* Table Container */
 .table-container {
-  margin-top: 1.5rem;
   overflow-x: auto;
-  border-radius: 0.5rem;
-  border: 1px solid rgba(226, 232, 240, 0.5);
-  background: rgba(255, 255, 255, 0.8);
-  backdrop-filter: blur(10px);
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
 }
 
-.inventory-table-element {
+.inventory-table-content {
   width: 100%;
   border-collapse: collapse;
-  background: transparent;
 }
 
-/* Table Header */
-.inventory-table-element thead {
-  background: rgba(248, 250, 252, 0.8);
-  backdrop-filter: blur(10px);
-}
-
-.inventory-table-element th {
-  padding: 0.75rem 1rem;
+.inventory-table-content th {
+  padding: 1rem;
   text-align: left;
   font-size: 0.875rem;
   font-weight: 600;
-  color: #374151;
-  border-bottom: 1px solid rgba(226, 232, 240, 0.5);
+  color: #6b7280;
+  background: #f9fafb;
+  border-bottom: 1px solid #f3f4f6;
 }
 
-/* Table Rows */
-.table-row {
-  transition: all 0.2s ease-in-out;
+.inventory-table-content td {
+  padding: 1rem;
+  border-bottom: 1px solid #f3f4f6;
 }
 
 .table-row:hover {
-  background: rgba(248, 250, 252, 0.6);
-  backdrop-filter: blur(10px);
-}
-
-.inventory-table-element td {
-  padding: 1rem;
-  border-bottom: 1px solid rgba(241, 245, 249, 0.5);
-  vertical-align: middle;
+  background: #f9fafb;
 }
 
 .table-row:last-child td {
   border-bottom: none;
 }
 
-/* Item Cell */
 .item-cell {
   min-width: 150px;
 }
@@ -88,192 +85,134 @@
 }
 
 .item-name {
-  font-weight: 600;
-  color: #1e293b;
   font-size: 0.875rem;
+  font-weight: 600;
+  color: #1f2937;
 }
 
 .item-category {
   font-size: 0.75rem;
-  color: #64748b;
-  padding: 0.125rem 0.375rem;
-  background: rgba(100, 116, 139, 0.1);
-  border-radius: 0.25rem;
-  width: fit-content;
+  color: #6b7280;
 }
 
-/* Location Cell */
 .location-cell {
-  min-width: 140px;
+  min-width: 120px;
 }
 
-.location-info {
-  display: flex;
-  align-items: center;
-  gap: 0.5rem;
+.location-name {
   font-size: 0.875rem;
-  color: #475569;
+  color: #374151;
 }
 
-.location-icon {
-  color: #64748b;
-}
-
-/* Quantity Cell */
 .quantity-cell {
-  text-align: center;
-  min-width: 80px;
-}
-
-.quantity-value {
-  font-weight: 600;
-  color: #1e293b;
-  font-size: 0.875rem;
-  padding: 0.25rem 0.5rem;
-  background: rgba(59, 130, 246, 0.1);
-  border-radius: 0.375rem;
-  display: inline-block;
-}
-
-/* Expires Cell */
-.expires-cell {
   min-width: 100px;
 }
 
-.expires-info {
-  display: flex;
-  align-items: center;
-  gap: 0.5rem;
+.quantity-value {
   font-size: 0.875rem;
-  color: #475569;
-}
-
-.expires-icon {
-  color: #64748b;
-}
-
-.expires-soon {
-  color: #dc2626 !important;
   font-weight: 600;
-  background: rgba(239, 68, 68, 0.1);
-  padding: 0.125rem 0.375rem;
-  border-radius: 0.25rem;
+  color: #1f2937;
 }
 
-/* Condition Cell */
-.condition-cell {
-  min-width: 140px;
-}
-
-.condition-info {
-  display: flex;
-  align-items: center;
-  gap: 0.5rem;
-}
-
-.condition-icon {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 20px;
-  height: 20px;
-  border-radius: 50%;
+.quantity-unit {
   font-size: 0.75rem;
-  font-weight: 700;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  color: #6b7280;
+  margin-left: 0.25rem;
 }
 
-.condition-icon.excellent {
-  background: linear-gradient(135deg, #dcfce7, #bbf7d0);
-  color: #166534;
-  box-shadow: 0 2px 8px rgba(16, 185, 129, 0.2);
+.expiry-cell {
+  min-width: 120px;
 }
 
-.condition-icon.good {
-  background: linear-gradient(135deg, #dbeafe, #bfdbfe);
-  color: #1e40af;
-  box-shadow: 0 2px 8px rgba(59, 130, 246, 0.2);
+.expiry-info {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
 }
 
-.condition-icon.warning {
-  background: linear-gradient(135deg, #fef3c7, #fed7aa);
-  color: #d97706;
-  box-shadow: 0 2px 8px rgba(245, 158, 11, 0.2);
-}
-
-.condition-icon.critical {
-  background: linear-gradient(135deg, #fee2e2, #fecaca);
-  color: #dc2626;
-  box-shadow: 0 2px 8px rgba(239, 68, 68, 0.2);
-}
-
-.condition-text {
+.expiry-date {
   font-size: 0.875rem;
-  color: #475569;
   font-weight: 500;
 }
 
-/* Risk Badges */
-.risk-badge {
-  padding: 0.25rem 0.5rem;
-  border-radius: 9999px;
-  font-size: 0.75rem;
-  font-weight: 600;
-  text-transform: uppercase;
-  letter-spacing: 0.025em;
-  backdrop-filter: blur(10px);
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+.expiry-date.expires-good {
+  color: #059669;
 }
 
-.risk-low {
-  background: rgba(220, 252, 231, 0.8);
-  color: #166534;
-  box-shadow: 0 2px 8px rgba(16, 185, 129, 0.2);
-}
-
-.risk-medium {
-  background: rgba(254, 243, 199, 0.8);
+.expiry-date.expires-soon {
   color: #d97706;
-  box-shadow: 0 2px 8px rgba(245, 158, 11, 0.2);
 }
 
-.risk-high {
-  background: rgba(254, 226, 226, 0.8);
+.expiry-date.expires-warning {
+  color: #f59e0b;
+}
+
+.expiry-date.expires-critical {
   color: #dc2626;
-  box-shadow: 0 2px 8px rgba(239, 68, 68, 0.2);
+}
+
+.days-left {
+  font-size: 0.75rem;
+  color: #6b7280;
+}
+
+.status-cell {
+  min-width: 100px;
+}
+
+.status-info {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.status-text {
+  font-size: 0.875rem;
+  font-weight: 500;
+}
+
+.status-excellent {
+  color: #059669;
+}
+
+.status-good {
+  color: #10b981;
+}
+
+.status-warning {
+  color: #f59e0b;
+}
+
+.status-critical {
+  color: #ef4444;
+}
+
+.status-unknown {
+  color: #6b7280;
 }
 
 /* Responsive Design */
 @media (max-width: 768px) {
-  .table-container {
+  .table-header {
+    flex-direction: column;
+    gap: 1rem;
+    align-items: stretch;
+  }
+
+  .inventory-table-content {
     font-size: 0.875rem;
   }
-  
-  .inventory-table-element th,
-  .inventory-table-element td {
-    padding: 0.5rem;
-  }
-  
-  .item-name {
-    font-size: 0.8rem;
-  }
-  
-  .item-category {
-    font-size: 0.7rem;
-  }
-}
 
-@media (max-width: 640px) {
-  .condition-info {
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 0.25rem;
+  .inventory-table-content th,
+  .inventory-table-content td {
+    padding: 0.75rem 0.5rem;
   }
-  
-  .location-info,
-  .expires-info {
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 0.25rem;
+
+  .item-cell,
+  .location-cell,
+  .quantity-cell,
+  .expiry-cell,
+  .status-cell {
+    min-width: auto;
   }
 }

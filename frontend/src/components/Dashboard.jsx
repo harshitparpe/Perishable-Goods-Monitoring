@@ -1,10 +1,11 @@
-import React from 'react'
-import StatsCards from './dashboard/StatsCards'
-import SpoilagePredictor from './dashboard/SpoilagePredictor'
-import SensorNetwork from './dashboard/SensorNetwork'
-import SpoilageChart from './dashboard/SpoilageChart'
-import InventoryTable from './dashboard/InventoryTable'
-import './style/Dashboard.css'
+import React from "react";
+import InventoryTable from "./dashboard/InventoryTable";
+import SensorNetwork from "./dashboard/SensorNetwork";
+import SpoilageChart from "./dashboard/SpoilageChart";
+import SpoilagePredictor from "./dashboard/SpoilagePredictor";
+import StatsCards from "./dashboard/StatsCards";
+
+import "./style/Dashboard.css";
 
 const Dashboard = () => {
   return (
@@ -40,7 +41,7 @@ const Dashboard = () => {
         </div>
       </div>
     </div>
-  )
-}
+  );
+};
 
-export default Dashboard
+export default Dashboard;
