@@ -164,7 +164,7 @@
   align-items: center;
   gap: 0.5rem;
   padding: 0.5rem;
-  background: rgba(248, 250, 252, 0.8);
+  background: linear-gradient(135deg, #3b83f6cd, #1d4fd8c5);
   backdrop-filter: blur(10px);
   border: 1px solid #e2e8f0;
   border-radius: 0.5rem;
@@ -174,7 +174,7 @@
 }
 
 .user-btn:hover {
-  background: rgba(241, 245, 249, 0.9);
+  background: linear-gradient(135deg, #3b83f6db, #1d4fd8ec);
   transform: translateY(-1px);
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
 }
@@ -199,15 +199,15 @@
   .header {
     padding: 1rem;
   }
-  
+
   .header-content {
     gap: 1rem;
   }
-  
+
   .header-title h1 {
     font-size: 1.25rem;
   }
-  
+
   .search-input {
     width: 200px;
   }
@@ -217,11 +217,11 @@
   .header-title h1 {
     display: none;
   }
-  
+
   .search-input {
     width: 150px;
   }
-  
+
   .user-name {
     display: none;
   }
