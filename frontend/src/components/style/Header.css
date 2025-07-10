@@ -1,6 +1,6 @@
 /* Header Container */
 .header {
-  background: rgba(255, 255, 255, 0.95);
+  background: linear-gradient(180deg, #1e293b 0%, #334155 100%);
   backdrop-filter: blur(20px);
   border-bottom: 1px solid #e2e8f0;
   padding: 1rem 2rem;
@@ -52,9 +52,9 @@
 }
 
 .header-title h1 {
-  font-size: 1.5rem;
+  font-size: 1.875rem;
   font-weight: 700;
-  color: #1e293b;
+  color: #ffffff;
   margin: 0;
 }
 
