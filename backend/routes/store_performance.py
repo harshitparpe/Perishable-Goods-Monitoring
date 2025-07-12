@@ -1,12 +1,9 @@
 from flask import Blueprint, jsonify
-from pymongo import MongoClient
+from db import products_collection
 
 store_performance_blueprint = Blueprint('store_performance', __name__)
 
-# MongoDB connection
-client = MongoClient("mongodb://localhost:27017/")
-db = client['perishable_monitoring']
-products_collection = db['products']
+
 
 @store_performance_blueprint.route('/store-performance', methods=['GET'])
 def store_performance():
@@ -27,7 +24,9 @@ def store_performance():
     savings = sold_before_spoilage * 50
 
     # Simple performance rating logic
-    if spoiled / total_products > 0.5:
+    if total_products == 0:
+        rating = "N/A"
+    elif spoiled / total_products > 0.5:
         rating = "Poor"
     elif spoiled / total_products > 0.2:
         rating = "Average"

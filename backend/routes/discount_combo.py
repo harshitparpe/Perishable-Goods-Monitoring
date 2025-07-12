@@ -1,12 +1,9 @@
 from flask import Blueprint, jsonify
-from pymongo import MongoClient
-
+from db import products_collection  
 discount_blueprint = Blueprint('discount_combo', __name__)
 
 # MongoDB connection
-client = MongoClient("mongodb://localhost:27017/")
-db = client['perishable_monitoring']
-products_collection = db['products']
+discount_blueprint = Blueprint('discount_combo', __name__)
 
 @discount_blueprint.route("/analyze-discounts-combos", methods=['GET'])
 def analyze_discounts():

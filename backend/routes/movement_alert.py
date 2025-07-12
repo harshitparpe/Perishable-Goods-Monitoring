@@ -1,12 +1,10 @@
 from flask import Blueprint, jsonify
-from pymongo import MongoClient
+from db import products_collection
 
 movement_blueprint = Blueprint('movement_alert', __name__)
 
 # MongoDB connection
-client = MongoClient("mongodb://localhost:27017/")
-db = client['perishable_monitoring']
-products_collection = db['products']
+movement_blueprint = Blueprint('movement_alert', __name__)
 
 @movement_blueprint.route('/movement-alerts', methods=['GET'])
 def movement_alerts():

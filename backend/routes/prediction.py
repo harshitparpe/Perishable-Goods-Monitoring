@@ -1,8 +1,8 @@
 from flask import Blueprint, request, jsonify
 import joblib
 import numpy as np
-from pymongo import MongoClient
 import os
+from db import products_collection
 
 prediction_blueprint = Blueprint('prediction', __name__)
 
@@ -10,10 +10,7 @@ prediction_blueprint = Blueprint('prediction', __name__)
 model_path = os.path.join(os.path.dirname(__file__), '..', 'spoilage_model.pkl')
 model = joblib.load(model_path)
 
-# MongoDB connection
-client = MongoClient("mongodb://localhost:27017/")
-db = client['perishable_monitoring']
-products_collection = db['products']
+
 
 @prediction_blueprint.route('/predict', methods=['POST'])
 def predict():
