@@ -1,133 +1,76 @@
-# 🥦 Perishable Goods Monitoring System
+# 🧊 Perishable Goods Monitoring System
 
-An end-to-end machine learning + IoT simulation project to monitor spoilage risk of perishable items (like food and medicine) based on environmental and inventory factors.  
-Built with **Flask (Python)** backend and a **React + Vite** frontend.
+A real-time, AI-powered platform for monitoring, predicting, and minimizing spoilage of perishable goods across the cold chain. Inspired by Walmart’s Eden AI, this solution offers SKU-level insights, cold storage monitoring, and predictive analytics to reduce waste and optimize efficiency.
 
 ---
 
-🚧 **Note:** This project is currently a _Work in Progress_. Some features may still be under development.
+## 📽 Demo Video
 
-## 📘 Project Summary
+🎥 [Watch the Demo on YouTube](https://youtu.be/HFAOeIFVTmw)
 
-### 🔍 Problem
+---
 
-High wastage in food and medicine occurs due to poor shelf-life management and lack of real-time monitoring.
+## 🖼️ Screenshot
 
-### 💡 Solution
+![Dashboard UI](./Dashboard_UI.jpg)
 
-A smart expiry management dashboard powered by simulated IoT inputs and machine learning to:
-
-- Predict spoilage probability
-- Suggest discounts at the right time
-- Provide combo suggestions for near-expiry goods
-- Detect fridge failures and push those items for quick sell
-- Trigger intra-store movement before expiry
-- Flag stores with consistently high spoilage percentages
-
-### 🧪 Mock Setup
-
-This system uses virtual sensors or Python-based APIs to simulate real-time data, including:
-
-- Temperature
-- Humidity
-- Storage duration
-- Days to expiry
-- Spoilage percentage
+---
 
 ## 🚀 Features
 
-- Simulates IoT sensor data (temperature, humidity, time stored, expiry)
-- Trains a **Random Forest Classifier** to predict spoilage probability
-- REST API to serve predictions
-- React frontend to input parameters and display recommendations
-- Recommendation logic:
-  - `Quick Sell` if spoilage risk > 70%
-  - `Monitor` otherwise
+- **Live Dashboard**: Monitor total items, alerts, spoilage rate, and cold storage stats in real time.
+- **AI Spoilage Predictions**: Get early warnings on items at risk with confidence scores.
+- **Sensor Network Integration**: Track temperature & humidity from multiple zones.
+- **Smart Alerts**: Receive critical warnings and actionable suggestions (e.g. discount or dispose).
+- **Historical Analytics**: Understand trends and recurring spoilage patterns for better planning.
 
 ---
 
-## 🛠️ Tech Stack
+## 🧠 Tech Stack
 
-### Backend
-
-- Python
-- Flask
-- Flask-CORS
-- Scikit-learn
-- Joblib
-- NumPy, Pandas
-
-### Frontend
-
-- React
-- Vite
-- Axios
+| Layer     | Technology                                   |
+| --------- | -------------------------------------------- |
+| Frontend  | React.js, Chart.js, Bootstrap                |
+| Backend   | Flask / Node.js                              |
+| Database  | MongoDB                                      |
+| ML Models | Python (scikit-learn, XGBoost, pandas)       |
+| DevOps    | Docker, Git, GitHub Actions (CI/CD optional) |
 
 ---
 
-## 🔄 API Reference
+## 🛠️ Setup Instructions
 
-**Endpoint:** `POST /predict`  
-**Content-Type:** `application/json`  
-**Request Body:**
+```bash
+# Clone the repository
+git clone https://github.com/yourusername/perishable-goods-monitor.git
+cd perishable-goods-monitor
 
-```json
-{
-  "temp": float,
-  "humidity": int,
-  "hours_stored": int,
-  "days_to_expiry": int
-}
+# Backend Setup
+cd backend
+pip install -r requirements.txt
+python app.py
+
+# Frontend Setup
+cd ../frontend
+npm install
+npm start
 ```
 
-**Response:**
-
-```json
-{
-  "spoiled_probability": float,
-  "recommendation": "Quick Sell" | "Monitor"
-}
-```
+> 📡 Simulated sensor data or real IoT integrations can be configured in `/data/` or through MQTT/API endpoints.
 
 ---
 
-## 📌 Future Improvements
+## 👨‍💻 Contributors
 
-- Store prediction history in database
-- Add charts to visualize spoilage trends
-- Deploy backend (Render) & frontend (Vercel)
-- Integrate real-time IoT sensor data streams
-
----
-
-## 📘 Project Overview
-
-### 🔍 Problem
-
-High wastage in food and medicine occurs due to poor shelf-life management and lack of real-time monitoring.
-
-### 💡 Solution
-
-A smart expiry management dashboard powered by simulated IoT inputs and ML prediction:
-
-- Predict spoilage probability of perishable goods
-- Suggest discounts at optimal times
-- Recommend combo offerings to sell near-expiry stock
-- Detect fridge failure and trigger “Quick Sell”
-- Enable intra-store transfers to avoid spoilage
-- Flag stores with high spoilage percentages
-
-### 🧪 Mock Setup
-
-- Uses virtual sensors or Python-based APIs to simulate inputs like temperature, humidity, hours stored, expiry window, and spoilage labels
-
-## ✨ Contributors
-
-- **Harshit Parpe** — Frontend, full-stack integration, & project setup
-- **Abhinav Dubey** — Backend & Machine Learning
+**Harshit Parpe**
+**Abhinav Dubey**
+**Daksh Aggarwal**
+**Chaitanya Singh**
 
 ---
 
 ## 📄 License
 
-This project is licensed under the MIT License.
+Licensed under the [MIT License](./LICENSE).
+
+---
